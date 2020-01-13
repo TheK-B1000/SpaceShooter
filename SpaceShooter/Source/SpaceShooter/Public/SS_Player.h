@@ -7,6 +7,7 @@
 #include "Particles/ParticleSystemComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/AudioComponent.h"
+#include "Components/CapsuleComponent.h"
 
 #include "SS_Player.generated.h"
 
@@ -22,16 +23,19 @@ public:
 	USceneComponent* DefaultSceneRoot;
 
 	UPROPERTY(EditAnywhere)
-		UParticleSystem* ParticleSystems;
+		UParticleSystemComponent* ParticleSystems;
 
 	UPROPERTY(EditAnywhere)
-		UParticleSystem* ExplosionFX;
+		UParticleSystemComponent* ExplosionFX;
 
 	UPROPERTY(EditAnywhere)
 		UStaticMeshComponent* ShipMesh;
 
 	UPROPERTY(EditAnywhere)
 		UAudioComponent* DeathExplosionSound;
+
+	UPROPERTY(EditAnywhere)
+		UCapsuleComponent* CollisionComponent;
 
 	UPROPERTY(EditAnywhere)
 		float Field_Width;
